@@ -2,7 +2,7 @@ pipeline {
 	agent node
 	stages {
 	stage ("build and SonarQube scan") {
-	agent any
+	agent none
 	steps {
 	withSonarQubeEnv('SonarQube_server') {
 	sh 'maven clean package sonar:sonar'
